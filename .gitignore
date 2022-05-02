@@ -1,3 +1,14 @@
 /.idea/
 **/__pycache__/
 /venv/
+/build/lib/_HKIPcamera.cpython-38-x86_64-linux-gnu.so
+/build/CMakeFiles/
+/build/npp_cuda/CMakeFiles/
+/build/npp_cuda/cmake_install.cmake
+/build/cmake_install.cmake
+/build/CMakeCache.txt
+/build/lib/hik_test.py
+/build/lib/HKIPcamera.py
+/build/npp_cuda/libnpp_cuda.a
+/build/npp_cuda/Makefile
+/build/Makefile

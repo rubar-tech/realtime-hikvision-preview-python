@@ -19,7 +19,7 @@ Install
   - set pybind11 path in CMakeLists.txt if needed, you can use one of these commands to find its path 
   `locate pybind11 | grep Config.cmake` `locate pybind11 | grep config.cmake`
 
-- ### download hikvision network sdk at 
+- ### download hikvision network sdk at(look sdk ready branch for pre downloaded sdk)
 https://www.hikvision.com/en/support/download/sdk/device-network-sdk--for-linux-64-bit-/
   - extract and copy it to project dir
     - from sdk_folder(EN-HCNetSDKV6.1xxxx) copy lib to project dir
