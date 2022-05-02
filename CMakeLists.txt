@@ -2,12 +2,13 @@ cmake_minimum_required(VERSION 2.8.11)
 project(HKIPcamera)
 
 # opencv
-Set(OpenCV_DIR ~/SDK/opencv340/installation/OpenCV-3.4.0/share/OpenCV)
+Set(OpenCV_DIR /usr/include/opencv)
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIRS})
 
 # pybind11
+# Set(pybind11_DIR /opt/conda/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/)
 find_package(pybind11 REQUIRED)
 
 # npp
@@ -20,9 +21,9 @@ set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-rpath=\"./\" -Wl,-rpath=\"./lib/\"")
 add_definitions(-std=c++11)
 add_compile_options(-fPIC)
 
-set(HIKVISION_INCLUDE ~/SDK/CH-HCNetSDKV6.0.2.2_build20181213_Linux64/incCn)
-set(PYTHON35_INCLUDE ~/anaconda3/include/python3.5m)
-include_directories(${HIKVISION_INCLUDE} ${PYTHON35_INCLUDE})
+set(HIKVISION_INCLUDE ${CMAKE_SOURCE_DIR}/EN-HCNetSDKV6.1.6.45_build20210302_linux64/incEn)
+set(PYTHON_INCLUDE /opt/conda/include/python3.8)
+include_directories(${HIKVISION_INCLUDE} ${PYTHON_INCLUDE} "${CMAKE_SOURCE_DIR}/EN-HCNetSDKV6.1.6.45_build20210302_linux64/QtDemo/includeCn")
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/HCNetSDKCom)
 
@@ -38,7 +39,6 @@ set(HKIPCam_LIBS 	AudioRender
 					crypto
 					hcnetsdk
 					hpr
-					opencv_world
 					ssl
 					HCAlarm
 					HCCoreDevCfg
