@@ -50,9 +50,14 @@ include `ld.so.conf.d/*.conf`
 
   - #### config the CMakeLists.txt, set OpenCV_DIR, HIKVISION_INCLUDE, PYTHON_INCLUDE
 
-copy all necessary librarys to ./lib or add the pathes to link_directories
+  - copy all necessary librarys to ./lib or add the pathes to link_directories
 
-make the project
+  - make the project
+    
+    - in the project dir `mkdir build && cd build`
+    - `cmake ..`
+    - `make`
+    - your files should be in `build/lib`
 
 Usage
 =====

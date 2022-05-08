@@ -12,3 +12,6 @@
 /build/npp_cuda/libnpp_cuda.a
 /build/npp_cuda/Makefile
 /build/Makefile
+/EN-HCNetSDKV6.1.6.45_build20210302_linux64/lib/HCNetSDKCom/libiconv.so.2
+/EN-HCNetSDKV6.1.6.45_build20210302_linux64/lib/libssl.so.1.0.0
+/EN-HCNetSDKV6.1.6.45_build20210302_linux64/lib/libz.so.1

@@ -13,7 +13,8 @@ source_group("Include" FILES ${NPP_CUDA_HEADS})
 source_group("Source" FILES ${NPP_CUDA_SOURCES})
 
 add_library(npp_cuda STATIC ${NPP_CUDA_HEADS} ${NPP_CUDA_SOURCES})
-target_link_libraries(npp_cuda ${CUDA_npp_LIBRARY})
+# comment this line for some versions of cuda exp 11.1
+# target_link_libraries(npp_cuda ${CUDA_npp_LIBRARY})
 
 # target_link_libraries(npp_cuda /usr/local/cuda/lib64/libcudart.so)
 # target_link_libraries(npp_cuda /usr/local/cuda/lib64/libnppc.so)
