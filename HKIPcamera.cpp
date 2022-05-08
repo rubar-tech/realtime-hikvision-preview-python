@@ -53,7 +53,7 @@ void yv12toRGBMat(char *inYv12, int width, int height, cv::Mat &outMat,
     cv::Mat yuvImg;
     yuvImg.create(yuvHeight, width, CV_8UC1);
     memcpy(yuvImg.data, inYv12, bufLen * sizeof(unsigned char));
-    cv::cvtColor(yuvImg, outMat, CV_YUV2BGR_YV12);
+    cv::cvtColor(yuvImg, outMat, COLOR_YUV2BGR_YV12);
   } else {
     outMat = cv::Mat(height, width, CV_8UC3);
     decodeH264((unsigned char *)(void *)(inYv12), outMat.data, width, height,
